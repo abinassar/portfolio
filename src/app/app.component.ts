@@ -10,6 +10,8 @@ import {FormControl} from '@angular/forms';
 export class AppComponent {
   mode = new FormControl('over');
   title = 'portfolio';
+  panelOpenState = false;
+
 }
 
 

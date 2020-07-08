@@ -25,6 +25,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 // Servicios
@@ -57,7 +59,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
     MatIconModule,
     MatMenuModule,
     MatRadioModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatExpansionModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

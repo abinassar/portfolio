@@ -7,6 +7,10 @@
     background-color: black;
 }
 
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
 .barra-lateral {
     width: 200px;
     background-color: rgb(53, 53, 53);
@@ -33,6 +37,10 @@
 
 .botones {
     display: flex;
+}
+
+.margen {
+    margin: 0px 10px;
 }
 
 .nombre {

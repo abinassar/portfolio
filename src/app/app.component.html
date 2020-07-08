@@ -1,14 +1,40 @@
 <mat-sidenav-container class="contenedor">
     <mat-sidenav #sidenav mode="over" class="barra-lateral">
 
-        <button class="boton" mat-button (click)="sidenav.toggle()">Menú</button>
+        <button class="boton" mat-button (click)="sidenav.toggle()">Contraer
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </button>
+        <div>
+        </div>
+        <mat-accordion>
 
 
-        <ul>
-            <button mat-button class="boton" routerLink="/home">Home </button>
-            <button mat-button class="boton" routerLink="/spotiapp">SpotiApp </button>
-            <button mat-button class="boton" routerLink="/pipes">Pipes </button>
-        </ul>
+            <mat-expansion-panel class="margen" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Proyectos
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div>
+
+                    <button mat-button routerLink="/home">
+                        Home 
+                    </button>
+
+                    <button mat-button routerLink="/spotiapp">
+                        SpotiApp 
+                    </button>
+
+                    <button mat-button routerLink="/pipes">
+                        Pipes 
+                    </button>
+
+
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+
 
     </mat-sidenav>
 
