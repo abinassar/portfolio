@@ -1,0 +1,34 @@
+<mat-sidenav-container class="contenedor">
+    <mat-sidenav #sidenav mode="over" class="barra-lateral">
+
+        <button class="boton" mat-button (click)="sidenav.toggle()">Menú</button>
+
+
+        <ul>
+            <button mat-button class="boton" routerLink="/home">Home </button>
+            <button mat-button class="boton" routerLink="/spotiapp">SpotiApp </button>
+            <button mat-button class="boton" routerLink="/pipes">Pipes </button>
+        </ul>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="contenedor">
+
+        <div class="boton-menu titulo">
+            <div class="botones">
+                <a href="/">
+                    <img class="logo" src="../assets/Images/Logo.png" alt="Logo Empresa">
+                </a>
+                <button class="boton" mat-button (click)="sidenav.toggle()">Menú</button>
+            </div>
+            <div>
+                <h1 class="nombre" style="color: white;">Gianfranco Abinassar</h1>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

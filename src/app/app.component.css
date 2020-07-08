@@ -1,0 +1,40 @@
+.contenedor {
+    /* display: flex; */
+}
+
+.boton-menu {
+    display: flex;
+    background-color: black;
+}
+
+.barra-lateral {
+    width: 200px;
+    background-color: rgb(53, 53, 53);
+    height: 100vh;
+}
+
+.boton {
+    margin: 30px 20px;
+    background-color: white;
+}
+
+.logo {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 10px 0 0 10px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.botones {
+    display: flex;
+}
+
+.nombre {
+    margin: 30px;
+}

@@ -1,0 +1,116 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> uppercase </td>
+        <td> {{ nombre | uppercase }}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> lowercase </td>
+        <td> {{ nombre | lowercase }}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> slice:3 (Elimina elementos de arreglo) </td>
+        <td> {{ nombre | slice:3 }}</td>
+      </tr>
+      <tr>
+        <td> {{ nombre }}</td>
+        <td> slice:0:3 (no elimina entre la posición 0 y 3)  </td>
+        <td> {{ nombre | slice:0:3 }}</td>
+      </tr>
+      <tr>
+        <td> {{ PI }}</td>
+        <td> number </td>
+        <td> {{ PI | number }}</td>
+      </tr>
+      <tr>
+        <td> {{ PI }}</td>
+        <td> number:'3.0-4' </td>
+        <td> {{ PI | number:'3.0-4' }}</td>
+      </tr>
+      <tr>
+        <td> {{ a }}</td>
+        <td> percent </td>
+        <td> {{ a | percent }}</td>
+      </tr>
+      <tr>
+        <td> {{ a }}</td>
+        <td> percent:'2.0-4' </td>
+        <td> {{ a | percent:'2.0-4' }}</td>
+      </tr>
+      <tr>
+        <td> {{ salario }}</td>
+        <td> currency </td>
+        <td> {{ salario | currency }}</td>
+      </tr>
+      <tr>
+        <td> {{ salario }}</td>
+        <td> currency:'EUR' </td>
+        <td> {{ salario | currency:'EUR' }}</td>
+      </tr>
+      <tr>
+        <td> {{ salario }}</td>
+        <td> currency:'EUR':true </td>
+        <td> {{ salario | currency:'EUR':true }}</td>
+      </tr>
+      <tr>
+        <td> {{ salario }}</td>
+        <td> currency:'EUR':true:'4.0-0' </td>
+        <td> {{ salario | currency:'EUR':true:'4.0-0' }}</td>
+      </tr>
+      <tr>
+        <td> {{ valorDePromesa }}</td>
+        <td> async </td>
+        <td> {{ valorDePromesa | async }}</td>
+      </tr>
+      <tr>
+        <td> {{ fecha }}</td>
+        <td> date </td>
+        <td> {{ fecha | date }}</td>
+      </tr>
+      <tr>
+        <td> {{ fecha }}</td>
+        <td> date:'medium' </td>
+        <td> {{ fecha | date:'medium' }}</td>
+      </tr>
+      <tr>
+        <td> {{ fecha }}</td>
+        <td> date:'MMMM - dd' </td>
+        <td> {{ fecha | date:'MMMM - dd' }}</td>
+      </tr>
+      <!-- <tr>
+        <td> {{ nombre2 }}</td>
+        <td> capitalizado </td>
+        <td> {{ nombre2 | capitalizado }}</td>
+      </tr> -->
+    </tbody>
+
+    <h2>JSON</h2>
+    <pre>
+      {{ jugador | json }}
+    </pre>
+
+    <h2>Slice en arreglo</h2>
+    <p>Arreglo original: [1,2,3,4,5,6,7,8,9,10], <br>
+      el slice se hará 4:12, desde el numero 5 hasta el 11 no se eliminará</p>
+    <ul>
+      <li *ngFor="let item of arreglo | slice:4:12"> {{ item }}</li>
+    </ul>
+  </table>
+
+</div>
